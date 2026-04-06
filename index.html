@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>IMAX Seat Viewer</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { margin:0; background:#000; color:#fff; font-family:system-ui,Segoe UI,Roboto,Arial; }
+    #uiTop { position:fixed; top:12px; left:12px; z-index:1000; }
+    #editHeightBtn { position:fixed; top:12px; right:12px; z-index:1000; padding:8px 12px; background:rgba(255,255,255,0.06); color:#fff; border-radius:6px; border:1px solid rgba(255,255,255,0.12); }
+    #theaterSelect { margin-left:12px; }
+    #metaPanel { position:fixed; bottom:12px; left:12px; z-index:1000; background:rgba(0,0,0,0.6); padding:10px; border-radius:8px; max-width:320px; }
+    #enterXR { position:fixed; bottom:12px; right:12px; z-index:1000; padding:12px 16px; background:#1e88e5; color:#fff; border-radius:8px; border:none; cursor:pointer; }
+    #canvasContainer { width:100vw; height:100vh; }
+    /* Simple modal */
+    .modal { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.75); z-index:2000; }
+    .modalBox { background:#111; padding:20px; border-radius:10px; width:320px; color:#fff; }
+    .modal input { width:100%; padding:8px; margin-top:8px; border-radius:6px; border:1px solid #333; background:#000; color:#fff; }
+    .modal .actions { margin-top:12px; display:flex; gap:8px; justify-content:flex-end; }
+    .hidden { display:none; }
+  </style>
+</head>
+<body>
+  <div id="uiTop">
+    <label id="theaterLabel">Loading theaters...</label>
+    <select id="theaterSelect" class="hidden" aria-label="Select theater"></select>
+  </div>
+
+  <button id="editHeightBtn" class="hidden" aria-label="Edit your height">Edit Height</button>
+
+  <div id="metaPanel" class="hidden"></div>
+
+  <button id="enterXR" class="hidden">Open with WebXR</button>
+
+  <div id="canvasContainer"></div>
+
+  <!-- Height modal -->
+  <div id="heightModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modalBox">
+      <h3>Enter your height</h3>
+      <div>
+        <select id="heightUnits"><option value="ft">ft/in</option><option value="cm">cm</option></select>
+        <input id="heightInput" placeholder="e.g., 5'10 or 178" />
+      </div>
+      <div class="actions">
+        <button id="skipHeight">Skip</button>
+        <button id="saveHeight">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

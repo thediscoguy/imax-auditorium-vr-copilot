@@ -1,0 +1,29 @@
+{
+  "venueName": "Regal New Roc IMAX",
+  "address": "33 LeCount Place, New Rochelle, NY, 10801",
+  "coordinates": { "lat": 40.91131, "lon": -73.78054 },
+  "units": "feet",
+  "screen": {
+    "width_ft": 81.5,
+    "height_ft": 59.5,
+    "width_m": 24.8,
+    "height_m": 18.1,
+    "type": "1.43:1",
+    "curvature_radius_ft": 180,
+    "color": "#ffffff",
+    "position": { "x": 0, "y": 9.0, "z": -40 }
+  },
+  "projector": { "type": "15/70 + Commercial Laser", "digital": "Commercial Laser", "film": "GT" },
+  "lastKnown70mm": "Interstellar",
+  "seatDimensions": { "seatWidth_ft": 0.55, "seatPitch_ft": 0.9, "rowRake_ft": 0.4 },
+  "seatLayout": [
+    { "rowId": "A", "count": 16, "offset_ft": -7.5, "elevation_ft": 0 },
+    { "rowId": "B", "count": 18, "offset_ft": -8.5, "elevation_ft": 0.4 },
+    { "rowId": "C", "count": 20, "offset_ft": -9.5, "elevation_ft": 0.8 },
+    { "rowId": "D", "count": 22, "offset_ft": -10.5, "elevation_ft": 1.2 },
+    { "rowId": "E", "count": 24, "offset_ft": -11.5, "elevation_ft": 1.6 }
+  ],
+  "scoringWeights": { "angle": 0.55, "distance": 0.25, "centerOffset": 0.20 },
+  "sourceUrl": "https://www.imax.com/theatre/regal-new-roc-imax",
+  "notes": "Curvature radius is an editable parameter; adjust for flatter or more wrapped screens."
+}
